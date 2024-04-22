@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page"; /*HTML Written by Chat GPT 4 -Jesse Bensen*/
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Make sure the body takes full viewport height */
+            background-color: #000; /* Set background to black */
+            color: #fff; /* Ensure text is white for any additional content */
+        }
+
+        .text-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Use 100% of the viewport height to center the iframe */
+            width: 100%; /* Use 100% of the viewport width */
+            position: relative; /* Needed for positioning adjustment */
+        }
+
+        iframe {
+            width: 100%; /* Full width */
+            height: 100vh; /* Full viewport height */
+            border: none; /* Remove any border */
+            position: absolute;
+            top: -10%; /* Raise the top edge of the iframe by 10% of the viewport height */
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <iframe src="@Url.Content("~/KVRBuild/index.html")"></iframe>
+    </div>
+</body>
+</html>
